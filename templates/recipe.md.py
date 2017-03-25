@@ -1,5 +1,6 @@
 {# ex: set ft=jinja: #}
 # {{ d.title }}
+*[Source]({{ d.source }})*
 
 | | |
 |-|-|
@@ -19,4 +20,3 @@
 {{ loop.index }}. {{ text }}
 
 {% endfor %}
-*[Source]({{ d.source }})*

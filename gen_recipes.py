@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import os
 
 from jinja2 import FileSystemLoader, Environment
 import pytoml as toml
@@ -10,14 +11,26 @@ def load_template(filename):
 
 
 def main():
-    with open('data/slow-cooked-chili.toml') as f:
-        data = toml.load(f)
-    template = load_template('recipe.md.py')
-    output = template.render(
-        d=data,
-    )
-    with open('harro.md', 'w') as f:
-        f.write(output)
+    files = []
+    readme_list = []
+    for (dirpath, dirnames, filenames) in os.walk('data'):
+        files.extend(filenames)
+    for filename in files:
+        basename_ext = os.path.splitext(filename)
+        if basename_ext[1] == '.toml':
+            with open('data/' + filename) as f:
+                data = toml.load(f)
+            template = load_template('templates/recipe.md.py')
+            output = template.render(
+                d=data,
+            )
+            recipe_path = 'recipe_files/' + basename_ext[0] + '.md'
+            with open(recipe_path, 'w') as f:
+                f.write(output)
+            readme_list.append((data['title'], recipe_path))
+    if readme_list:
+        pass
+
 
 if __name__ == "__main__":
     main()
