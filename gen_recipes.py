@@ -29,7 +29,13 @@ def main():
                 f.write(output)
             readme_list.append((data['title'], recipe_path))
     if readme_list:
-        pass
+        lines = []
+        lines.append('# Recipes\n\n')
+        for item in sorted(readme_list):
+            lines.append('[' + item[0] + '](' + item[1] + ')\n')
+        with open('README.md', 'w') as f:
+            for line in lines:
+                f.write(line)
 
 
 if __name__ == "__main__":

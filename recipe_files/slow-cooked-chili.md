@@ -1,5 +1,5 @@
 # Slow-Cooked Chili
-*[Source](http://allrecipes.com/recipe/223390/spicy-slow-cooked-chili/)*
+*[Source](http://allrecipes.com/recipe/223390/spicy-slow-cooked-chili)*
 
 | | |
 |-|-|
