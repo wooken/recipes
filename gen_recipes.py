@@ -32,7 +32,7 @@ def main():
         lines = []
         lines.append('# Recipes\n\n')
         for item in sorted(readme_list):
-            lines.append('[' + item[0] + '](' + item[1] + ')\n')
+            lines.append('[' + item[0] + '](' + item[1] + ')  \n')
         with open('README.md', 'w') as f:
             for line in lines:
                 f.write(line)
