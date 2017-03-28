@@ -1,0 +1,22 @@
+source = "http://www.familyfreshmeals.com/2014/07/honey-garlic-crockpot-meatballs.html"
+
+title = "Slow-Cooked Honey Garlic Meatballs"
+
+prep = "5 m"
+cook = "4 h"
+yield = "6-8"
+
+ingredients = [
+    "¼ cup brown sugar",
+    "⅓ cup honey",
+    "½ cup ketchup",
+    "2 TB soy sauce",
+    "3 cloves garlic, minced",
+    "1 (28oz) bag fully cooked, frozen meatballs",
+]
+
+directions = [
+    "In a medium bowl, mix together brown sugar, honey, ketchup, soy sauce and garlic.",
+    "Place frozen meatballs in a 3-4 quart crockpot and pour sauce over meatballs. Stir so all meatballs are coated evenly. Cook on LOW for 4 hours, stirring occasionally.",
+    "Use as an appetizer or serve over rice for a meal!",
+]
